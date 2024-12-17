@@ -3,7 +3,7 @@ require("dotenv").config();
 const { RtcTokenBuilder, RtcRole } = require("agora-access-token");
 const cors = require("cors"); // Import cors package
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Replace with your App ID and App Certificate from Agora
 const APP_ID = process.env.APP_ID;
