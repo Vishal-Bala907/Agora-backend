@@ -38,6 +38,7 @@ app.get("/generateToken", (req, res) => {
     channelName,
     uid,
     rtcRole,
+    36000,
     privilegeExpireTime
   );
 
