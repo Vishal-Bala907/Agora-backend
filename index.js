@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const { RtcTokenBuilder, RtcRole } = require("agora-access-token");
-const cors = require("cors"); // Import cors package
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -10,6 +10,7 @@ const APP_ID = process.env.APP_ID;
 const APP_CERTIFICATE = process.env.APP_CERTIFICATE;
 
 app.use(cors());
+
 // Token expiration time in seconds
 const expirationTimeInSeconds = process.env.TOKEN_EXPIRATION;
 
@@ -38,7 +39,6 @@ app.get("/generateToken", (req, res) => {
     channelName,
     uid,
     rtcRole,
-    36000,
     privilegeExpireTime
   );
 
